@@ -4,19 +4,45 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #f3f3f3;
+  background-color: #626463;
 }
 
 .card {
   margin: 20px;
+  background-color: #626463;
+}
+
+.card-body, .card-title, .card-text{
+  background-color: rgb(161, 166, 170);
+}
+
+p{
+  font-style: italic;
 }
 
 h1 {
+  display: flex;
+  justify-content: center;
   margin: 20px;
+  border: 2px solid;
+  border-radius: 5px;
+  padding: 5px;
 }
 
 .card-img-fixed {
   width: 100%;
   height: 250px;
   object-fit: cover;
+}
+
+.bg-1{
+background-color: rgb(191, 196, 201);
+}
+
+.bg-2{
+background-color: rgb(233, 241, 248);
+}
+
+.bg-3{
+background-color: rgb(246, 250, 255);
 }

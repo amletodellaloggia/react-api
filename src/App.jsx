@@ -30,9 +30,9 @@ function App() {
                 <p className="card-text">{actress.biography}</p>
               </div>
               <ul className="list-group list-group-flush">
-                <li className="list-group-item">{actress.birth_year}</li>
-                <li className="list-group-item">{actress.nationality}</li>
-                <li className="list-group-item">{actress.awards}</li>
+                <li className="list-group-item bg-1">{actress.birth_year}</li>
+                <li className="list-group-item bg-2">{actress.nationality}</li>
+                <li className="list-group-item bg-3">{actress.awards}</li>
               </ul>
             </div>
           </div>
