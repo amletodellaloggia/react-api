@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 
 function App() {
@@ -9,6 +9,8 @@ function App() {
       .get("https://lanciweb.github.io/demo/api/actresses/")
       .then((res) => setActresses(res.data));
   }
+  
+useEffect(fetchActresses, []);
 
   return (
     <>
