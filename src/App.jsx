@@ -13,31 +13,34 @@ function App() {
   useEffect(fetchActresses, []);
 
   return (
-    <>
-      <h1>Lista Attrici</h1>
+    <div className="container my-4">
+      <h1 className="mb-4">Lista Attrici</h1>
 
-      {actresses.map((actress) => (
-        <div className="card" style={{ width: "18rem" }} key={actress.id}>
-          <img
-            src={actress.image}
-            className="card-img-top"
-            alt={actress.name}
-          />
-          <div className="card-body">
-            <h5 className="card-title">{actress.name}</h5>
-            <p className="card-text">{actress.biography}</p>
+      <div className="row row-cols-1 row-cols-md-4 g-4">
+        {actresses.map((actress) => (
+          <div className="col" key={actress.id}>
+            <div className="card h-100">
+              <img
+                src={actress.image}
+                className="card-img-top card-img-fixed"
+                alt={actress.name}
+              />
+              <div className="card-body">
+                <h5 className="card-title">{actress.name}</h5>
+                <p className="card-text">{actress.biography}</p>
+              </div>
+              <ul className="list-group list-group-flush">
+                <li className="list-group-item">{actress.birth_year}</li>
+                <li className="list-group-item">{actress.nationality}</li>
+                <li className="list-group-item">{actress.awards}</li>
+              </ul>
+            </div>
           </div>
-          <ul className="list-group list-group-flush">
-            <li className="list-group-item">{actress.birth_year}</li>
-            <li className="list-group-item">{actress.nationality}</li>
-            <li className="list-group-item">{actress.awards}</li>
-          </ul>
-        </div>
-      ))}
-    </>
+        ))}
+      </div>
+    </div>
   );
 }
 
 export default App;
-
 
